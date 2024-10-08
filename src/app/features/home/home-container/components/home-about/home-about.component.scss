@@ -1,0 +1,173 @@
+.about{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    background-color: var(--lsi-primary-color);
+    padding-top: 100px;
+    padding-bottom: 300px;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+
+            .left{
+                display: flex;
+                flex-direction: column;
+
+                .title{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    margin-bottom: 7px;
+                    line-height: 23px;
+                    display: flex;
+                    align-items: center;
+
+                    fa-icon{
+                        margin-right: 10px;
+                        font-size: 16px;
+                        padding: 5px 8px;
+                        border-radius: 50%;
+                        border: 1px solid black;
+                    }
+
+                    span{
+                        font-size: 15px;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    padding: 13px 25px;
+                    background-color: black;
+                    border: none;
+                    width: fit-content;
+                    cursor: pointer;
+                    font-weight: 600;
+                    color: white;
+                    position: relative;
+                    overflow: hidden;
+                    flex-wrap: nowrap;
+                    height: fit-content;
+                    border-radius: 100px;
+                    margin-top: 15px;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        background-color: var(--lsi-primary-color);
+                        left: -100%;
+                        transition: left 0.2s ease-in-out ;
+                    }
+
+                    &:hover{
+                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;                         
+                        color: black;
+
+                        &::before{
+                            left: 0;
+                        }
+
+                        span{
+                            z-index: 1;
+                        }
+
+                        i{    
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    span{
+                        font-size: 15px;
+                        white-space: nowrap;
+                    }
+
+                    i{
+                        margin-left: 12px;
+                        font-size: 1.2rem;
+                        transition: all 0.2s ease-out;
+                    }
+                }
+        
+            }
+    
+            .right{
+                max-width: 600px;
+                p{
+                    margin-bottom: 10px;
+                    line-height: 23px;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .image-bloc{
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 1400px;
+            width: 100%;
+            padding: 0 20px;
+            height: 500px;
+
+            .image-wrapper{
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                height: 100%;
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.434);
+                }
+                fa-icon{
+                    position: absolute;
+                    left: 50%;
+                    top : 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 13px 20px;
+                    background-color: white;
+                    color: black;
+                    cursor: pointer;
+                    z-index: 9;
+                    border-radius: 50%;
+                    font-size: 2rem;
+                    transition: background-color 0.3s ease-in-out;
+
+                    &:hover{
+                        background-color: var(--lsi-primary-color);
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            
+        }
+        
+    }
+}

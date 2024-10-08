@@ -1,0 +1,27 @@
+<div class="home-recommendations">
+    <div class="content my-container">
+        <div class="top">
+            <h2 class="title">Nos Recommendations</h2>
+            <button routerLink="/notre-carte">
+                <span>Voir La Carte</span>
+                <i class="pi pi-arrow-up-right"></i>
+            </button>
+        </div>
+    
+        <div class="products">
+            <ng-container *ngFor="let product of products">
+                <div class="product">
+                    <div class="image-container">
+                        <img src={{product.imageBg}} alt={{product.name}}>
+                    </div>
+                    <div class="texts">
+                        <p class="title">{{product.name}}</p>
+                        <p class="description"> {{product.shortDescription}} </p>
+                        <p class="price"> {{product.price}} €</p>
+                        <button> Commander </button>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

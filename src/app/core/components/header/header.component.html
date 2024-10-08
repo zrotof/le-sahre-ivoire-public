@@ -1,0 +1,35 @@
+<header  #header [ngStyle]="message ? {'margin-top': '2.5rem'}: {'margin-top': '0'}">
+
+    <div class="content header-container">
+        <a routerLink="/" class="logo">
+            Le Sahré Ivoire
+        </a>
+    
+        <div class="right">
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"  routerLink="/">Accueil</a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active-link" routerLink="/a-propos">Le Restaurant</a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active-link" routerLink="/notre-carte">Notre Carte</a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active-link" routerLink="/contact">Nous Contacter</a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <div class="side-cart_menu-on-small-screen">
+                <app-side-cart></app-side-cart>
+                <app-side-menu></app-side-menu>
+            </div>
+    
+        </div>
+
+    </div>
+
+</header>

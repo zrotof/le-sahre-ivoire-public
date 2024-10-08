@@ -1,11 +1,8 @@
-<div class="start">
-  <div class="faces">
-    <fa-icon [icon]="faFaceMehBlank"></fa-icon>
-    <fa-icon [icon]="faFaceMeh"></fa-icon>
-    <fa-icon [icon]="faFaceSmile"></fa-icon>
-    <fa-icon [icon]="faFaceLaugh"></fa-icon>
-  </div>
-  
-  <p>Tout est OK ! </p>
-  <i class="pi pi-check"></i>
+<div class="app">
+  <ng-container *ngIf=" (announce$ | async) as announce ">
+    <app-announcement [message]="announce"></app-announcement>
+  </ng-container>
+  <app-header [message]="announce$ | async"></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>

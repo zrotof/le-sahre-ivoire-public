@@ -1,0 +1,12 @@
+<div class="menu-cart-items">
+    <ng-container *ngFor="let cartItem of cartItems">
+        <button
+            [ngClass]="cartItem.isActive ? 'active-menu' : ''"
+            (click)="onCartItemClicked(cartItem)"
+            >
+            {{cartItem.label}} 
+            <span>{{cartItem.stock}}</span>
+        </button>
+    </ng-container>
+</div>
+

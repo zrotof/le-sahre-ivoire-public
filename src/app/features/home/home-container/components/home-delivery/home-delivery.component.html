@@ -1,0 +1,18 @@
+<div class="delivery">
+    <div class="content my-container">
+        <img class="left" src="../../../../../../assets/img/delivery/delivery.jpeg" alt="delivery guy">
+        <div class="right">
+            <h2 class="title">Faites-Vous Livrer Chez Vous À La Maison </h2>
+            <p>Explorez '<strong>Le Sahré Ivoire</strong>' sans quitter de votre chez-vous !</p> 
+            <p>Nos délices africains sont maintenant disponibles en livraison rapide via <strong><em>Uber Eats</em></strong> et <strong><em>Just Eat</em></strong>. Parcourez notre menu en ligne, choisissez vos plats préférés, et laissez-nous créer une expérience gastronomique unique dans le confort de votre foyer.</p>
+            <ul>
+                <ng-container *ngFor="let app of foodApps">
+                    <li>
+                        <img src={{app.image}} alt={{app.alt}}>
+                        <a href={{app.link}} target="_blank">{{app.name}}</a>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>

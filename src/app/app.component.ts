@@ -1,16 +1,28 @@
 import { Component } from '@angular/core';
-import { faFaceLaugh } from '@fortawesome/free-solid-svg-icons'
-import { faFaceMehBlank, faFaceMeh, faFaceSmile } from '@fortawesome/free-regular-svg-icons'
+import { RouterOutlet } from '@angular/router';
+import { Observable, of } from 'rxjs';
+import { AnnouncementComponent } from './core/components/announcement/announcement.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { FooterComponent } from './core/components/footer/footer.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  standalone : true,
+  imports : [
+    NgIf,
+    RouterOutlet,
+    AsyncPipe,
+    AnnouncementComponent,
+    HeaderComponent,
+    FooterComponent
+  ]
 })
 export class AppComponent {
-  title = 'angular-starter-module-architecture-V15';
+  title = 'Le Sahré Ivoire';
 
-  faFaceSmile = faFaceSmile;
-  faFaceMehBlank = faFaceMehBlank;
-  faFaceMeh = faFaceMeh;
-  faFaceLaugh = faFaceLaugh;
+  announce$ : Observable<string> = of("Le Sahré Ivoire vous souhaite d'excellentes fêtes de fin d'année ! ")
+
 }

@@ -1,0 +1,38 @@
+.our-rewards{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .title{
+            margin-bottom: 20px;
+        }
+
+        p{
+            line-height: 23px;
+            font-size: 15px;
+        }
+
+        .rewards{
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            overflow: scroll;
+            margin-top: 40px;
+            padding-bottom: 20px;
+
+            li{
+                width: 280px;
+                height: 250px;
+                flex: none;
+                border: 2px solid black;
+                border-radius: 7px;
+                padding: 10px;
+            }
+        }
+    }
+}

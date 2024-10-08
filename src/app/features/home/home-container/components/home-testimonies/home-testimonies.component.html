@@ -1,0 +1,48 @@
+<div class="home-testimonies">
+    <div class="content my-container">
+        <div class="top">
+            <div class="left">
+                <span>Découvrez Ce Que Pensent Nos Clients De Nous </span>
+            </div>
+
+            <div class="right">
+                <p>Vous aussi laissez-nous votre avis sur </p>
+                <div class="advices-ways">
+                    <div class="advice-way">
+                        <img src="../../../../../../assets/img/icons/google.png" alt="google icon">
+                        <button>Google</button>
+                    </div>
+                    <div class="advice-way">
+                        <img src="../../../../../../assets/img/icons/facebook.png" alt="facebook icon">
+                        <button>Facebook</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="testimonies">
+                <ng-container *ngFor="let testimony of testimonies">
+                    <div class="testimony">
+                        <div class="texts">
+                            <fa-icon [icon]="faQuoteRight"></fa-icon>
+                            <p> {{testimony.message}} </p>
+
+                            <div class="stars">
+                                <img src="../../../../../../assets/img/icons/star.png" alt="étoile">
+                                <img src="../../../../../../assets/img/icons/star.png" alt="étoile">
+                                <img src="../../../../../../assets/img/icons/star.png" alt="étoile">
+                                <img src="../../../../../../assets/img/icons/star.png" alt="étoile">
+                                <img src="../../../../../../assets/img/icons/star.png" alt="étoile">
+                            </div>
+                        </div>
+                        <div class="person">
+                            <img src={{testimony.image}} alt={{testimony.name}}>
+                            <span>{{testimony.name}} </span>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="home-container">
+    <app-hero-banner></app-hero-banner>
+    <app-home-what-makes-difference></app-home-what-makes-difference>
+    <app-home-recommendations [products]="recommended$ | async"></app-home-recommendations>
+    <app-home-about></app-home-about>
+    <app-home-delivery></app-home-delivery>
+    <app-home-testimonies [testimonies]="testimonies$ | async"></app-home-testimonies>
+</div>

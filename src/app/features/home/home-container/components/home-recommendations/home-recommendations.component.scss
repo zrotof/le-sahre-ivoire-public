@@ -1,0 +1,152 @@
+.home-recommendations{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: flex-end;
+            margin-bottom: 40px;
+
+            button{
+                display: flex;
+                align-items: center;
+                padding: 13px 25px;
+                background-color: black;
+                border: none;
+                width: fit-content;
+                cursor: pointer;
+                font-weight: 600;
+                color: white;
+                position: relative;
+                overflow: hidden;
+                flex-wrap: nowrap;
+                height: fit-content;
+                border-radius: 100px;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    background-color: var(--lsi-primary-color);
+                    left: -100%;
+                    transition: left 0.2s ease-in-out ;
+                }
+
+                &:hover{
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;                         
+                    color: black;
+
+                    &::before{
+                        left: 0;
+                    }
+
+                    span{
+                        z-index: 1;
+                    }
+
+                    i{    
+                        transform: rotate(45deg);
+                    }
+                }
+
+                span{
+                    font-size: 15px;
+                    white-space: nowrap;
+                }
+
+                i{
+                    margin-left: 12px;
+                    font-size: 1.2rem;
+                    transition: all 0.2s ease-out;
+                }
+            }
+        }
+
+        .products{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+            column-gap: 20px;
+            row-gap: 40px;
+
+            .product{
+                width: 100%;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover{
+                    background-color: var(--lsi-primary-color);
+                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+                    .image-container{
+                        img{
+                            transform: scale(1.2);
+                        }
+                    }
+                    .texts{
+                        button{
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+                }
+
+                .image-container{
+                    width: 100%;
+                    height: 270px;
+                    overflow: hidden;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
+                .texts{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+
+                    .title{
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        font-size: 1.2rem;
+                    }
+    
+                    .description{
+                        line-height: 21px;
+                        font-size: 15px;
+                    }
+    
+                    .price{
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+    
+                    button{
+                        width: fit-content;
+                        margin-top: 15px;
+                        border: none;
+                        padding: 7px 20px;
+                        border: 1px solid black;
+                        background-color: transparent;
+                        background-color: white;
+                        pointer-events: none;
+                    }    
+                }
+            }
+        }
+    }
+}

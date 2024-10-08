@@ -1,0 +1,168 @@
+.home-testimonies{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(228, 228, 228);
+    margin-top: 100px;
+    padding: 70px 0;
+
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: flex-end;
+            margin-bottom: 40px;
+
+            .left{
+                display: flex;
+                flex-direction: column;
+                max-width: 450px;
+
+                span{
+                    font-size: 2.5rem;
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+
+            .right{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                border: solid;
+                border-radius: 10px;
+                align-items: center;
+                background-color: var(--lsi-primary-color);
+
+                .advices-ways{
+                    display: flex;
+                    margin-top: 15px;
+                    justify-content: center;
+                    gap: 2rem;
+
+                    .advice-way{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        cursor: pointer;
+    
+                        &:hover{
+
+                            img{
+                                background-color: black;
+                            }
+
+                            button{
+                                background-color: black;
+                                color: white;
+                                font-weight: bold;
+                            }
+                        }
+
+                        img{
+                            width: 50px;
+                            padding: 10px;
+                            border-radius: 50%;
+                            background-color: white;
+                            transition: all 0.2s ease-in-out;
+                        }
+
+                        button{
+                            background-color: white;
+                            border-radius: 100px;
+                            border: none;
+                            padding: 7px 15px;
+                            margin-top: 10px;
+                            color: black;
+                            font-weight: bold;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .testimonies{
+            display: flex;
+            gap: 2rem;
+            overflow-x: scroll;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
+            
+            .testimony{
+                width: 310px;
+                height: 350px;
+                background-color: white;
+                flex: none;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: hidden;
+                cursor: pointer;
+                scroll-snap-align: center;
+
+                &:hover{
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                }
+
+                .texts{
+                    padding: 20px;
+                    height: 100%;
+
+                    fa-icon{
+                        padding: 5px 8px ;
+                        background-color: black;
+                        color: white;
+                        border-radius: 50%;
+                        font-size: 1.2rem;
+                        margin-bottom: 50px;
+                    }
+
+                    p{
+                        line-height: 21px;
+                        font-size: 15px;
+                        margin-top: 20px;
+                    }
+
+                    .stars{
+                        display: flex;
+                        margin-top: 15px;
+
+                        img{
+                            width: 20px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .person{
+                    border-top: 1px solid rgb(228, 228, 228);
+                    display: flex;
+                    padding: 10px;
+                    align-items: center;
+
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        object-fit: cover;
+                        object-position: top center;
+                    }
+
+                    span{
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        text-wrap: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}

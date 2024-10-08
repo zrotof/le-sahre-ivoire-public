@@ -1,0 +1,10 @@
+<ul class="what-makes-difference">
+    <div class="content my-container">
+        <ng-container *ngFor="let reason of reasons">
+            <li>
+                <img src={{reason.image}} alt={{reason.title}}>
+                <span>{{reason.title}}</span>
+            </li>
+        </ng-container>
+    </div>
+</ul>

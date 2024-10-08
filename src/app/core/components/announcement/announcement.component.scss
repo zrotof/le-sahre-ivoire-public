@@ -1,0 +1,36 @@
+.announcement-container {
+    
+    background-color: var(--lsi-primary-color);
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 100%;
+
+    .content{
+        width: 100%;        
+        overflow: hidden;
+        display: flex;
+
+        .text {
+            display: flex;
+            animation: slide 10s linear infinite;
+
+            span {
+                margin: 0 140px;
+                white-space: nowrap;
+                font-size: 14px;
+//                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+//                font-weight: bold;
+            }
+
+            @keyframes slide {
+                from {transform: translateX(0) }
+                to {transform: translateX(calc(-50%))}
+            }
+        }
+    }
+  }
+  

@@ -1,0 +1,17 @@
+<div class="menu-container">   
+    <app-mini-hero [miniHero]="(miniHero$ | async)!"></app-mini-hero>
+    <div class="content my-container">
+        <app-menu-cart-items 
+            [cartItems]="(restaurantCartItems$ | async)!"
+            (cartItemMenu)="getFoodsOrDrinks($event)"
+            >
+        </app-menu-cart-items>
+
+        <div class="products">
+            <ng-container *ngFor="let product of (productList$ | async)!">
+                <app-product-details [product]="product"></app-product-details>
+            </ng-container>
+        </div>
+    </div>
+    
+</div>
